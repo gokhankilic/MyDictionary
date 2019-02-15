@@ -84,9 +84,16 @@ class MainVC: UIViewController,UITableViewDelegate,UITableViewDataSource,UITextF
     
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
         let deleteAction = UITableViewRowAction(style: .destructive, title: "DELETE") { (rowAction, indexPath) in
-            self.removeWord(atIndexPath: indexPath)
-            self.fetch()
-            tableView.deleteRows(at: [indexPath], with: .automatic)
+            
+           self.removeWord(atIndexPath: indexPath)
+           
+            //tableView.deleteRows(at: [indexPath], with: .automatic) // this code causes crash
+            
+            
+          
+          self.fetch()
+          tableView.reloadData()
+          self.searchTextField.text = ""
         }
         
     
@@ -98,6 +105,11 @@ class MainVC: UIViewController,UITableViewDelegate,UITableViewDataSource,UITextF
     
     func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
         return .none
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        searchTextField.resignFirstResponder()
+        return true
     }
     
     func save(){
