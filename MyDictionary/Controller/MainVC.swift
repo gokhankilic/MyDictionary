@@ -34,6 +34,8 @@ class MainVC: UIViewController,UITableViewDelegate,UITableViewDataSource,UITextF
         wordsTableView.delegate = self
         wordsTableView.dataSource = self
         searchTextField.delegate = self
+        englishWordTextView.delegate = self
+        turkishWordTextView.delegate = self
         
     }
 
@@ -108,7 +110,7 @@ class MainVC: UIViewController,UITableViewDelegate,UITableViewDataSource,UITextF
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        searchTextField.resignFirstResponder()
+        textField.resignFirstResponder()
         return true
     }
     

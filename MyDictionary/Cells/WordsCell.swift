@@ -14,9 +14,20 @@ class WordsCell: UITableViewCell {
     @IBOutlet weak var turkishMeanLbl: UILabel!
     var dateAdded:Date?
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        englishMeanLbl.adjustsFontSizeToFitWidth = true
+        turkishMeanLbl.adjustsFontSizeToFitWidth = true
+        
+        
+        
+    }
     
     func configureCell(word:Word){
         self.englishMeanLbl.text = word.englishMean
         self.turkishMeanLbl.text = word.turkishMean
     }
+    
+    
 }
