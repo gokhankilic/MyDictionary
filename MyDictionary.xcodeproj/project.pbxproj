@@ -15,6 +15,8 @@
 		B60491F7221597DD0063426C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B60491F5221597DD0063426C /* LaunchScreen.storyboard */; };
 		B604920022159C000063426C /* CorneredButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60491FF22159C000063426C /* CorneredButton.swift */; };
 		B60492042215A12D0063426C /* WordsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60492032215A12D0063426C /* WordsCell.swift */; };
+		B66DC27F221C48EC00A1CD15 /* CreateAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66DC27E221C48EC00A1CD15 /* CreateAccountVC.swift */; };
+		B66DC281221C48FC00A1CD15 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66DC280221C48FC00A1CD15 /* LoginVC.swift */; };
 		B6BC6AD6221BF61700FDDB59 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BC6AD5221BF61700FDDB59 /* MainVC.swift */; };
 		B6F968BB221AE02E00ED5A2D /* GameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F968BA221AE02E00ED5A2D /* GameVC.swift */; };
 /* End PBXBuildFile section */
@@ -30,6 +32,8 @@
 		B60491F8221597DD0063426C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B60491FF22159C000063426C /* CorneredButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorneredButton.swift; sourceTree = "<group>"; };
 		B60492032215A12D0063426C /* WordsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsCell.swift; sourceTree = "<group>"; };
+		B66DC27E221C48EC00A1CD15 /* CreateAccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountVC.swift; sourceTree = "<group>"; };
+		B66DC280221C48FC00A1CD15 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		B6BC6AD5221BF61700FDDB59 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		B6F968BA221AE02E00ED5A2D /* GameVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -91,6 +95,8 @@
 				B60491EB221597DB0063426C /* AddWordVC.swift */,
 				B6F968BA221AE02E00ED5A2D /* GameVC.swift */,
 				B6BC6AD5221BF61700FDDB59 /* MainVC.swift */,
+				B66DC27E221C48EC00A1CD15 /* CreateAccountVC.swift */,
+				B66DC280221C48FC00A1CD15 /* LoginVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -176,8 +182,10 @@
 			files = (
 				B60491EC221597DB0063426C /* AddWordVC.swift in Sources */,
 				B604920022159C000063426C /* CorneredButton.swift in Sources */,
+				B66DC27F221C48EC00A1CD15 /* CreateAccountVC.swift in Sources */,
 				B60491F2221597DB0063426C /* MyDictionary.xcdatamodeld in Sources */,
 				B60491EA221597DB0063426C /* AppDelegate.swift in Sources */,
+				B66DC281221C48FC00A1CD15 /* LoginVC.swift in Sources */,
 				B6F968BB221AE02E00ED5A2D /* GameVC.swift in Sources */,
 				B60492042215A12D0063426C /* WordsCell.swift in Sources */,
 				B6BC6AD6221BF61700FDDB59 /* MainVC.swift in Sources */,
