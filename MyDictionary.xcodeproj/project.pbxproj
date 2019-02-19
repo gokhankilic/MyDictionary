@@ -8,19 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		B60491EA221597DB0063426C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60491E9221597DB0063426C /* AppDelegate.swift */; };
-		B60491EC221597DB0063426C /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60491EB221597DB0063426C /* MainVC.swift */; };
+		B60491EC221597DB0063426C /* AddWordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60491EB221597DB0063426C /* AddWordVC.swift */; };
 		B60491EF221597DB0063426C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B60491ED221597DB0063426C /* Main.storyboard */; };
 		B60491F2221597DB0063426C /* MyDictionary.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B60491F0221597DB0063426C /* MyDictionary.xcdatamodeld */; };
 		B60491F4221597DD0063426C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B60491F3221597DD0063426C /* Assets.xcassets */; };
 		B60491F7221597DD0063426C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B60491F5221597DD0063426C /* LaunchScreen.storyboard */; };
 		B604920022159C000063426C /* CorneredButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60491FF22159C000063426C /* CorneredButton.swift */; };
 		B60492042215A12D0063426C /* WordsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60492032215A12D0063426C /* WordsCell.swift */; };
+		B6BC6AD6221BF61700FDDB59 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BC6AD5221BF61700FDDB59 /* MainVC.swift */; };
+		B6F968BB221AE02E00ED5A2D /* GameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F968BA221AE02E00ED5A2D /* GameVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B60491E6221597DB0063426C /* MyDictionary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyDictionary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B60491E9221597DB0063426C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B60491EB221597DB0063426C /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
+		B60491EB221597DB0063426C /* AddWordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWordVC.swift; sourceTree = "<group>"; };
 		B60491EE221597DB0063426C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B60491F1221597DB0063426C /* MyDictionary.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyDictionary.xcdatamodel; sourceTree = "<group>"; };
 		B60491F3221597DD0063426C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -28,6 +30,8 @@
 		B60491F8221597DD0063426C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B60491FF22159C000063426C /* CorneredButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorneredButton.swift; sourceTree = "<group>"; };
 		B60492032215A12D0063426C /* WordsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsCell.swift; sourceTree = "<group>"; };
+		B6BC6AD5221BF61700FDDB59 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
+		B6F968BA221AE02E00ED5A2D /* GameVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,7 +88,9 @@
 		B60492012215A0A90063426C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				B60491EB221597DB0063426C /* MainVC.swift */,
+				B60491EB221597DB0063426C /* AddWordVC.swift */,
+				B6F968BA221AE02E00ED5A2D /* GameVC.swift */,
+				B6BC6AD5221BF61700FDDB59 /* MainVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -168,11 +174,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B60491EC221597DB0063426C /* MainVC.swift in Sources */,
+				B60491EC221597DB0063426C /* AddWordVC.swift in Sources */,
 				B604920022159C000063426C /* CorneredButton.swift in Sources */,
 				B60491F2221597DB0063426C /* MyDictionary.xcdatamodeld in Sources */,
 				B60491EA221597DB0063426C /* AppDelegate.swift in Sources */,
+				B6F968BB221AE02E00ED5A2D /* GameVC.swift in Sources */,
 				B60492042215A12D0063426C /* WordsCell.swift in Sources */,
+				B6BC6AD6221BF61700FDDB59 /* MainVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
