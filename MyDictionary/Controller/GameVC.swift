@@ -23,7 +23,7 @@ class GameVC: UIViewController,UITextFieldDelegate {
     @IBOutlet var bottomConstraint: NSLayoutConstraint!  //!!!!!!! REMOVED WEAK REFERANCE SOLVED THE NIL PROBLEM !!!!!!!!
     
     var words:[Word]?
-    var correctAnswer : String?
+    var correctAnswer : [String]?
     var score:Int = 0
     var tempBottomConstraint:NSLayoutConstraint?
     
@@ -39,36 +39,36 @@ class GameVC: UIViewController,UITextFieldDelegate {
     override func viewWillAppear(_ animated: Bool) {
         self.timeTxt.text = "0"
         self.scoreTxt.text = "0"
-       
+        
         answerTextField.delegate = self
         answerTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
         generateQuestion()
         setTimer()
-       
-        }
-      
         
-        func setTimer(){
-            var runCount = 15
+    }
+    
+    
+    func setTimer(){
+        var runCount = 15
+        
+        Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
             
-            Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
+            runCount -= 1
+            self.timeTxt.text = ("\(runCount)")
+            if runCount == 0 {
+                timer.invalidate()
                 
-                runCount -= 1
-                self.timeTxt.text = ("\(runCount)")
-                if runCount == 0 {
-                    timer.invalidate()
-               
-                    UIView.animate(withDuration: 1.5, animations: {
-                        NSLayoutConstraint.deactivate([self.bottomConstraint])
-                        self.endTableView.isHidden = false
-                        self.endTableView.frame = CGRect(x:0, y: 0, width: 375, height: 450)
-                        self.view.layoutIfNeeded()
-                        self.endScoreTxt.text = ("\(self.score)")
-                       
-                    }) { (finished) in
-                        
-                    }
+                UIView.animate(withDuration: 1.5, animations: {
+                    NSLayoutConstraint.deactivate([self.bottomConstraint])
+                    self.endTableView.isHidden = false
+                    self.endTableView.frame = CGRect(x:0, y: 0, width: 375, height: 450)
+                    self.view.layoutIfNeeded()
+                    self.endScoreTxt.text = ("\(self.score)")
+                    
+                }) { (finished) in
+                    
                 }
+            }
         }
         
     }
@@ -97,17 +97,26 @@ class GameVC: UIViewController,UITextFieldDelegate {
         let englishMean = selectedWord?.englishMean
         let turkishMean = selectedWord?.turkishMean
         self.questionTxt.text = englishMean
-        correctAnswer = turkishMean
+        
+        if (turkishMean?.contains(","))!{
+            correctAnswer = turkishMean?.components(separatedBy: ",")
+        }else{
+            correctAnswer = [turkishMean] as? [String]
+        }
         
     }
     
     @objc func textFieldDidChange(_ textField: UITextField) {
-       
+        
         if let answer = textField.text {
-            if answer.lowercased() == correctAnswer?.lowercased() {
-                score = score + 1
-                scoreTxt.text = ("\(score)")
-                generateQuestion()
+            
+            for i in 0..<correctAnswer!.count{
+                
+                if answer.lowercased() == correctAnswer![i].lowercased() {
+                    score = score + 1
+                    scoreTxt.text = ("\(score)")
+                    generateQuestion()
+                }
             }
         }
     }
@@ -115,8 +124,19 @@ class GameVC: UIViewController,UITextFieldDelegate {
     
     @IBAction func showAnswer(_ sender: Any) {
         correctAnswerTxt.isHidden = false
-        correctAnswerTxt.text = correctAnswer
-       }
+        var answerString = ""
+        for i in 0..<correctAnswer!.count{
+            
+            answerString.append(correctAnswer![i])
+            
+            if correctAnswer!.count > 1  && i != correctAnswer!.count - 1{
+                answerString.append(",")
+            }
+            
+        }
+        
+        correctAnswerTxt.text = answerString
+    }
     
     
     
@@ -132,10 +152,10 @@ class GameVC: UIViewController,UITextFieldDelegate {
     
     
     @IBAction func mainMenuWasPressed(_ sender: Any) {
-     
-    performSegue(withIdentifier: "toMainVC", sender: nil)
-    
+        
+        performSegue(withIdentifier: "toMainVC", sender: nil)
+        
     }
     
-  
+    
 }

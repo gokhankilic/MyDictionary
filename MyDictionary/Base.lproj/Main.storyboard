@@ -94,6 +94,10 @@
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="=" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hV2-Z5-cYT">
                                                             <rect key="frame" x="136.5" y="0.0" width="62" height="22"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="62" id="C95-f2-04E"/>
+                                                                <constraint firstAttribute="height" constant="22" id="Nb9-3B-AHc"/>
+                                                            </constraints>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                             <nil key="highlightedColor"/>
@@ -105,10 +109,6 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
-                                                    <constraints>
-                                                        <constraint firstItem="hV2-Z5-cYT" firstAttribute="centerY" secondItem="Sw7-nk-X0U" secondAttribute="centerY" id="Duf-M5-0IJ"/>
-                                                        <constraint firstItem="hV2-Z5-cYT" firstAttribute="centerX" secondItem="Sw7-nk-X0U" secondAttribute="centerX" id="YIk-x8-5tQ"/>
-                                                    </constraints>
                                                 </stackView>
                                             </subviews>
                                             <constraints>
