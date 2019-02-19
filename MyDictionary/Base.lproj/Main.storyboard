@@ -109,6 +109,10 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="hV2-Z5-cYT" firstAttribute="centerY" secondItem="Sw7-nk-X0U" secondAttribute="centerY" id="eR3-07-YFP"/>
+                                                        <constraint firstItem="hV2-Z5-cYT" firstAttribute="centerX" secondItem="Sw7-nk-X0U" secondAttribute="centerX" id="oGe-48-dXc"/>
+                                                    </constraints>
                                                 </stackView>
                                             </subviews>
                                             <constraints>
@@ -122,7 +126,7 @@
                                                 <constraint firstItem="Sw7-nk-X0U" firstAttribute="leading" secondItem="MNY-TN-qSG" secondAttribute="leadingMargin" constant="5" id="ryW-1Q-30d"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.94901960784313721" green="1" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <outlet property="englishMeanLbl" destination="ryw-Qa-79N" id="04K-Jd-pnP"/>
                                             <outlet property="turkishMeanLbl" destination="Cte-df-4WN" id="SNK-d6-P3U"/>
@@ -211,7 +215,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.94901960784313721" green="1" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="1PA-6g-RoG" firstAttribute="top" secondItem="dGR-px-od5" secondAttribute="bottom" constant="15" id="3ho-E5-dnX"/>
                             <constraint firstItem="ROL-UY-SdI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ErB-Tf-Du3"/>

@@ -49,7 +49,7 @@ class GameVC: UIViewController,UITextFieldDelegate {
     
     
     func setTimer(){
-        var runCount = 15
+        var runCount = 30
         
         Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
             
