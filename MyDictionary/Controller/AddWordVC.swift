@@ -31,6 +31,8 @@ class AddWordVC: UIViewController,UITableViewDelegate,UITableViewDataSource,UITe
     override func viewDidLoad() {
         super.viewDidLoad()
         
+       
+        
         wordsTableView.delegate = self
         wordsTableView.dataSource = self
         searchTextField.delegate = self
@@ -142,7 +144,6 @@ class AddWordVC: UIViewController,UITableViewDelegate,UITableViewDataSource,UITe
         
         do {
             try words = managedContext.fetch(fetchRequest) as! [Word]
-            print("Successfuly fetch data")
             
             
         }catch{
@@ -152,6 +153,7 @@ class AddWordVC: UIViewController,UITableViewDelegate,UITableViewDataSource,UITe
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+         self.navigationController?.setNavigationBarHidden(false, animated: true)
         fetch()
         wordsTableView.reloadData()
         searchTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)

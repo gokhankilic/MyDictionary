@@ -40,6 +40,8 @@ class GameVC: UIViewController,UITextFieldDelegate {
         self.timeTxt.text = "0"
         self.scoreTxt.text = "0"
         
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
+        
         answerTextField.delegate = self
         answerTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
         generateQuestion()
